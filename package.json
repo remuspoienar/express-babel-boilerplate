@@ -1,0 +1,34 @@
+{
+  "name": "node-babel-boilerplate",
+  "version": "1.0.0",
+  "description": "Babel Node.js with express",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "nodemon --exec babel-node src/index.js",
+    "serve": "npm run build && node dist/index.js",
+    "test": "yarn build && yarn mocha --require @babel/register"
+  },
+  "author": "Remus Poienar <remus.poienar.not@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "husky": "^4.3.6",
+    "mocha": "7.1.1",
+    "nodemon": "^1.17.5",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1"
+  },
+  "type": "module"
+}
